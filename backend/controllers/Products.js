@@ -59,3 +59,21 @@ export const updateProduct = async (req, res) => {
         });
     }
 }
+
+//delete product
+export const deleteProduct = async (req, res) => {
+    try {
+        await Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
+        res.json({
+            "message": "Product deleted"
+        });
+    } catch (error) {
+        res.json({
+            message: error.message
+        });
+    }
+}
