@@ -41,3 +41,21 @@ export const createProduct = async (req, res) => {
         });
     }
 }
+
+//update product
+export const updateProduct = async (req, res) => {
+    try {
+        await Product.update(req.body, {
+            where: {
+                id: req.params.id
+            }
+        });
+        res.json({
+            "message": "Product updated"
+        });
+    } catch (error) {
+        res.json({
+            message: error.message
+        });
+    }
+}
