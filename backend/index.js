@@ -4,6 +4,7 @@ import db from "./config/database.js";
 import router from "./routes/auth.js";
 import productRoutes from "./routes/index.js";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 const app = express();
@@ -15,7 +16,8 @@ try {
     console.err('Connection error', err)
 }
 
-app.use(cors());
+app.use(cors({ credentials: true, origin:'http://localhost:3000' }));
+app.use(cookieParser());
 app.use(express.json());
 app.use('/products', productRoutes);
 app.use(router);
