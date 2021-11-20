@@ -82,7 +82,7 @@ export const Login = async (req, res) => {
             accessToken
         });
     } catch (error) {
-        res.json({
+        res.status(404).json({
             msg: "Email tidak ditemukan"
         });
     }
