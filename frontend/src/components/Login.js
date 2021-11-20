@@ -11,12 +11,11 @@ const Login = () => {
     const Auth = async (e) => {
         e.preventDefault();
         try {
-            const hasil = await axios.post('http://localhost:5000/login', {
+            await axios.post('http://localhost:5000/login', {
                 email: email,
                 password: password
             });
             history.push("/dashboard");
-            console.log(hasil)
         } catch (error) {
             if(error.response){
                 setMsg(error.response.data.msg);

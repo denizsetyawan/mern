@@ -6,10 +6,10 @@ export const Navbar = () => {
             <div className="container">
                 <div className="navbar-brand">
                     <a className="navbar-item" href="https://bulma.io">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/>
+                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="logo" />
                     </a>
                 
-                    <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <a href="/" role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -18,7 +18,7 @@ export const Navbar = () => {
                 
                 <div id="navbarBasicExample" className="navbar-menu">
                     <div className="navbar-start">
-                    <a className="navbar-item">
+                    <a href="/" className="navbar-item">
                         Home
                     </a>
                     </div>
@@ -26,9 +26,9 @@ export const Navbar = () => {
                     <div className="navbar-end">
                     <div className="navbar-item">
                         <div className="buttons">
-                        <a className="button is-light">
+                        <button className="button is-light">
                             Logout
-                        </a>
+                        </button>
                         </div>
                     </div>
                     </div>
